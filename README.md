@@ -11,7 +11,7 @@ cryptosystem. Alice gives the public key pk to Bob.
 Bob sends the RSA encrypted key K and the AES encryption of M, i.e., (Crsa, Caes), to Alice.
 
 * After receiving (Crsa, Caes), Alice first decrypts Crsa using the private key sk and
-obtains K as K ← C^{d}_rsa mod n, and then decrypts Caes using the AES key K to obtain M as M ← AES.Dec(K, Caes).
+obtains K as $K ← C^{d}_rsa$ mod n, and then decrypts Caes using the AES key K to obtain M as M ← AES.Dec(K, Caes).
   
   
 
