@@ -8,10 +8,10 @@ cryptosystem. Alice gives the public key pk to Bob.
 * Bob: Bob has a plaintext message M of size 1 MB. Bob randomly samples an AES key of size 128 bits, $K ← {(0, 1)}^{128}$, and then Bob computes the following:
   * Encrypt the key using the RSA encryption algorithm as $C_{aes} ← K^e$ mod n
   * Encrypt the data M using the AES encryption algorithm, Caes ← AES.Enc(K, M).
-Bob sends the RSA encrypted key K and the AES encryption of M, i.e., (Crsa, Caes), to Alice.
+Bob sends the RSA encrypted key K and the AES encryption of M, i.e., ($C_{rsa}$, $C_{aes}$), to Alice.
 
-* After receiving (Crsa, Caes), Alice first decrypts Crsa using the private key sk and
-obtains K as $K ← C^{d}_{rsa}$ mod n, and then decrypts Caes using the AES key K to obtain M as M ← AES.Dec(K, Caes).
+* After receiving ($C_{rsa}$, $C_{aes}$), Alice first decrypts Crsa using the private key sk and
+obtains K as $K ← C^{d}_{rsa}$ mod n, and then decrypts Caes using the AES key K to obtain M as M ← AES.Dec(K, $C_{aes}$).
   
   
 
