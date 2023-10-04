@@ -6,7 +6,7 @@ and wishes to send encrypted data to Alice using hybrid encryption, which is a c
 cryptosystem. Alice gives the public key pk to Bob.
 
 * Bob: Bob has a plaintext message M of size 1 MB. Bob randomly samples an AES key of size 128 bits, $K ← {(0, 1)}^{128}$, and then Bob computes the following:
-  * Encrypt the key using the RSA encryption algorithm as $C_{aes} ← K^e mod n$
+  * Encrypt the key using the RSA encryption algorithm as $C_{aes} ← K^e$ mod n
   * Encrypt the data M using the AES encryption algorithm, Caes ← AES.Enc(K, M).
 Bob sends the RSA encrypted key K and the AES encryption of M, i.e., (Crsa, Caes), to Alice.
 
