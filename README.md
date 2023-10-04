@@ -14,5 +14,4 @@ Bob sends the RSA encrypted key K and the AES encryption of M, i.e., ($C_{rsa}$,
 obtains K as $K$ ← ${C_{rsa}}^d$ mod n, and then decrypts Caes using the AES key K to obtain M as M ← AES.Dec(K, $C_{aes}$).
   
   
-
-
+![0005](https://github.com/srana0/HybridEncryption/assets/93364397/6e34d6dd-7bc5-4f93-ae5c-81cdaec57386)
